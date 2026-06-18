@@ -4,9 +4,13 @@ Sistema de pagamentos desenvolvido em Java aplicando os 5 princípios do SOLID.
 
 ## 📚 Princípios aplicados
 
-- **S (Single Responsibility)** → cada classe com uma única responsabilidade: `Pedido` guarda dados, `PagamentoService` processa, cada forma de pagamento cuida de si mesma
-- **O (Open/Closed)** → novas formas de pagamento podem ser adicionadas sem modificar nenhuma classe existente
-- **D (Dependency Inversion)** → `PagamentoService` depende da interface `FormaPagamento`, nunca de uma implementação concreta
+- **S (Single Responsibility)** → cada classe com uma única responsabilidade
+- **O (Open/Closed)** → novas formas de pagamento sem modificar código existente
+- **I (Interface Segregation)** → interface FormaPagamento pequena e específica
+- **D (Dependency Inversion)** → PagamentoService depende da abstração, não da implementação
+
+> O princípio L (Liskov) não se aplica diretamente pois o projeto usa 
+> interfaces ao invés de herança, mas o design segue a mesma filosofia.
 
 ## 🗂️ Estrutura do projeto
 
